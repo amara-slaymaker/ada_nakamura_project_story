@@ -19,7 +19,9 @@ layout: landing
 							<header class="major">
 								<h2>Evolution of Agriculture <br />
 								Inputs, Environmental Impacts & Outputs</h2>
-								<p>World population is growing as never before and it is no secret. This increase has been made possible thanks to the progress that technologies have brought in the agriculture domain. The modern agriculture use lot of useful tools whether it is machinery, fertilizers, chemical pesticides, and so on. They made the humans able to harvest bigger areas, being more efficient, deal with illnesses and parasites, keep the food consumable longer... Those revolutions drastically changed the agriculture habits.</p>
+								<p>World population is growing as never before and it is no secret. This increase has been made possible thanks to the progress of agricultural technologies. 
+									Modern agriculture utilizes useful tools such as machinery, fertilizers, chemical pesticides. This has made is possible for humans to harvest larger areas, 
+									increase efficiency, deal with illnesses and parasites, keep improve food shelf life. These revolutions have drastically changed agricultural practices.</p>
 							</header>
 						</div>
 					</section>
@@ -29,10 +31,13 @@ layout: landing
 					<section id="two" class="wrapper alt style2">
 
 						<section class="spotlight">
-							<div class="image"><img src="images/popvsgas.png" alt="" /></div><div class="content">
-								<h2>Progresses often come with drawbacks and modern agriculture isn't exempted<br /></h2>
-								<p>One of the most common examples is the increase in greenhouse gas emissions. On the following graph, one can see the evolution of the global population and the evolution of gas emissions due to agriculture.
-								<br /><br /> One must be aware to check the units: The two curves don't represent the same thing here, but the conclusion is that the greenhouse gas emissions due to agriculture are roughly increasing collinearly with the global population until now. This is no good prediction for the future, as we are already seeing the significant environmental consequences of this way of life.
+							<div class="image"><br /><img src="images/popvsgas.png" alt="" /></div><div class="content">
+								<h2>Progresses often comes with drawbacks - modern agriculture is not exempt<br /></h2>
+								<p>One drawback is the increase in greenhouse gas emissions. On the following graph, one can see the evolution of 
+									the global population (in terms of number of people) and the evolution of gas emissions due to agriculture (in terms of GgCO2).
+								<br /><br /> We can see that greenhouse gas emissions due to agriculture are roughly increasing collinearly with the global population until now as
+								agriculture intensifies to keep feeding the increasing number of people. 
+								This brings concern for the future, as we are already seeing the environmental consequences of this way of life.
 								</p>
 							</div>
 						</section>
@@ -51,7 +56,7 @@ layout: landing
 						</section>
 
 						<section class="spotlight">
-							<div class="image"><img src="images/cereals1961.png" alt="" /><img src="images/cereals2017.png" alt="" /></div><div class="content">
+							<div class="image"><img src="images/cereals1961.png" alt="" /><br /><img src="images/cereals2017.png" alt="" /></div><div class="content">
 								<h2>A yield explosion</h2>
 								<p>Those plots are more than convincing: the average yield of the top 10 countries has risen up by 3 between 
 									1961 and 2017. This proves that the 3rd agricultural revolution did improve the yields. Moreover, the top 10 
@@ -108,7 +113,7 @@ layout: landing
 
 						<section class="spotlight">
 							<div ></div><div class="content">
-								<h2>Should we need to change our practices?</h2>
+								<h2>Do we need to change our practices?</h2>
 								<p>But what if we take a look at the evolution of this effect over time (i.e. evolution of the slope of the linear 
 									relationship)? Are fertilizers still increasing yields? Or should we focus on alternative now?<br /><br />
 									Ok, now that’s interesting: while the median of agriculture score  for all countries (left panel, in black) is 
@@ -132,8 +137,16 @@ layout: landing
 					<section id="five" class="wrapper style5 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Need for TRANSITION</h2>
-								<p>TRANSITION
+								<h2>And What about the Environment? </h2>
+								<p>Besides helping food to grow, the use of fertilizers also has a significant environmental
+									impact in terms of emissions, as was seen in the first plot of this page. These emissions 
+									use occur due to emissions of nitrous oxide when nitrogen is applied to soils. One tonne of nitrous oxide 
+									emissions is equivalent to almost 300 tonnes of CO2 emissions - therefore this has important consequences for global warming.<br /><br />
+									
+									Due to the supposed link between fertilizers and yield, one might assume that in order to achieve high yields, high emissions are necessary 
+									or inevitable. But is this really the case? Below we will take a closer look at the link between emissions and agricultural yield, as we have 
+									done above for application of fertilizer.
+
 									
 								</p>
 							</header>
@@ -142,13 +155,102 @@ layout: landing
 <!-- Two -->					
 					<section id="five" class="wrapper alt style2">
 						<section class="spotlight">
-							<div class="image"><img src="images/cereals1961.png" alt="" /><img src="images/cereals2017.png" alt="" /></div><div class="content">
-								<h2>Your title</h2>
-								<p> Your text</p>
+							<div {% include pca_emissions_year.html %}></div><div class="content">
+								<h2>Relationship between Yield and Emissions</h2>
+								<p> Principle component analysis was used again to compare agriculture score to fertilizer use for all countries between 2002 and 2017.
+									As can be seen in the plot, there is some noticeable separation between the countries with high emissions (red), medium emissions (yellow), and low emissions(green), and we can see that countries
+									with the highest agricultural scores are all medium or high emitting countries. <br /><br /> However,
+									there are also many countries which have a similar agricultural indicator score, while having significantly different emissions. From this, we can see that the link between agriculture and emissions
+									is not as evident as one might initially believe.  </p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div {% include pca_emissions_evolution.html %}></div><div class="content">
+								<h2>Let's take another look:</h2>
+								<p>To study this relationship more in depth, we again took a closer look at the evolution of agricultural score and emissions 
+									over the years per country. This time the classification (high, medium, low) is based on emissions. <br /><br />Here we can see that for the 
+									high group, agricultural score is remaining approximately constant while emissions are clearly increasing. For the low group, we can also see that
+									agricultural score is increasing while emissions are remaining relatively constant. 
+									<br /><br />This further enforces the realization that 
+									more emissions does not always mean better agriculture - an important fact to realize considering the necessity of reducing global emissions.
+
+									<br /><br />
+								</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><img src="images/Fertilizers_Emissions.png" style="width:500px;height:450px;" style="padding-left: 10px; padding-bottom: 20px;" alt="" /></div><div class="content">
+								<h2>Fertilizer Use and Emissions: A Strong Link?</h2>
+								<p>Although there are similarities, we can see that the link between emissions and yield is slightly different than
+									the link between fertilizer and yield. This brings to question the nature of the relationship between fertilizer and yield.
+									The plot to the left shows the average fertilizer use and emissions for each country between 2002 and 2016. We can see that the relationship
+									between fertilizer use and emissions is indeed quite linear particularly at low levels - however beyond approximately 50kg/ha, the 
+									points begin deviating - some with lower and some with higher emissions than what might be predicted if we assumed a linear relationship.
+									
+									.<br /><br />
+								</p>
+							</div>
+						</section>
+						<section class="spotlight">
+							<div class="image"><img src="images/correlation_fertilizer.png" style="width:400px;height:350px;" style="padding-left: 10px; padding-bottom: 20px;" alt="" /><br /><img src="images/nitrogen_cycle.png" style="width:400px;height:400px;" style="padding-left: 10px; padding-bottom: 20px;" alt="" /></div><div class="content">
+								<h2>Let's take a closer look:</h2>
+								<p>To go deeper, we can also investigate the level of correlation between emissions and fertilizer use. Correlation between the evolution of fertilizer use and emissions between 2002 and 2016 was determined based on Pearson's correlation 
+									coefficient which tests for linear relationships. The correlation is plotted against fertilizer use for each country and the plots are coloured
+									based on the emissions levels. It can be seen that for lower fertilizer and emissions use a wide range of both positive and negative correlations are possible, whereas
+									as fertilizer application increases, the correlation is more likely to be positive. <br /><br />This may indicate that the more fertilizer we use, the more likely we are to have high emissions.
+									In fact, the increase in emissions for a given fertilizer use is generally expected to increase for higher fertilizer use, as more nitrogen is applied than the plants and soil can
+									effectively use. This further enforces the drawbacks of fertilizer use. However, it can also be seen that in general there is a wide spread of correlations even when fertilizer use is similar - which may be
+									explained by the fact that emissions can also depend on the method of fertilizer application, among other factors.
+									
+									.<br /><br />
+								</p>
+							</div>
+						</section>
+
+					</section>
+<!-- One -->
+						<section id="six" class="wrapper style5 special">
+							<div class="inner">
+								<header class="major">
+								<h2>What does this mean?</h2>
+									<p>We have seen that the link between yield and emissions is not necessarily increasing, however
+										emissions continue to increase. What does this tell us if we consider the CO2 efficiency of our 
+										agricultural production? 
+								
+								
+										
+									</p>
+								</header>
+							</div>
+						</section>	
+						
+<!-- Two -->					
+					<section id="six" class="wrapper alt style2">
+						<section class="spotlight">
+							<div class="image"><img src="images/efficiency_emissions.png" style="padding-left: 10px; padding-bottom: 20px;" alt="" /></div><div class="content">
+								<h2>How is emission intensity of fertilizer use evolving?</h2>
+								<p> Considering the non-increasing relationshp observed between yield and fertilizer emissions, an "emissions efficiency" factor of agriculture was calculated, taking
+									a country's yield indicator divided by their emissions factor. As can be seen in the plot, there is generally a downward trend, indicating that our food production is
+									actually becoming less efficient in terms of emissions, at a time when emissions reduction targets are of key importance.  </p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><img src="images/spain_switzerland.png" style="padding-left: 10px; padding-bottom: 20px;" alt="" /></div><div class="content">
+								<h2>Is all hope lost?</h2>
+								<p>Although the situation presented thus far is not very optimistic, at the local level there are some improvements being made - as we can see 
+									looking at the efficiency evolution of Spain, which is an important agricultural producer. (Whereas Switzerland more closely follows the steadily
+									decreasing global average)  <br /><br />
+									However, overall, it is evident that there is a need for action in order to ensure we can continue feeding earth's growing population without 
+									continuously increasing the rate at which we degrade our earth - and at any rate, these methods are becoming less effective, and cannot be expected to
+									support us forever. <br /><br />
+								</p>
 							</div>
 						</section>
 <!-- One -->
-					<section id="six" class="wrapper style5 special">
+					<section id="seven" class="wrapper style5 special">
 						<div class="inner">
 							<header class="major">
 								<h2>Need for change</h2>
