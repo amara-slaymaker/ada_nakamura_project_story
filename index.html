@@ -1,0 +1,170 @@
+---
+layout: landing
+---
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>{{ site.title }}</h2>
+							<p>{{ site.description | markdownify }}</p>
+							<ul class="actions">
+								<li><a href="#" class="button special">ADA 2019 CS-401</a></li>
+							</ul>
+						</div>
+						<a href="#one" class="more scrolly">Learn More</a>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style5 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Evolution of Agriculture <br />
+								Inputs, Environmental Impacts & Outputs</h2>
+								<p>World population is growing as never before and it is no secret. This increase has been made possible thanks to the progress that technologies have brought in the agriculture domain. The modern agriculture use lot of useful tools whether it is machinery, fertilizers, chemical pesticides, and so on. They made the humans able to harvest bigger areas, being more efficient, deal with illnesses and parasites, keep the food consumable longer... Those revolutions drastically changed the agriculture habits.</p>
+							</header>
+						</div>
+					</section>
+				
+				<!-- Two -->
+				
+					<section id="two" class="wrapper alt style2">
+
+						<section class="spotlight">
+							<div class="image"><img src="images/popvsgas.png" alt="" /></div><div class="content">
+								<h2>Progresses often come with drawbacks and modern agriculture isn't exempted<br /></h2>
+								<p>One of the most common examples is the increase in greenhouse gas emissions. On the following graph, one can see the evolution of the global population and the evolution of gas emissions due to agriculture.
+								<br /><br /> One must be aware to check the units: The two curves don't represent the same thing here, but the conclusion is that the greenhouse gas emissions due to agriculture are roughly increasing collinearly with the global population until now. This is no good prediction for the future, as we are already seeing the significant environmental consequences of this way of life.
+								</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div {% include cereal_yield.html %}></div><div class="content">
+								<h2>Back to the last decades</h2>
+								<p>Let’s focus on the crops production. For those products, the FAO database proposes a 
+									consistent measure, which is the ratio between the production of a country and its harvested area. We will 
+									refer to this measure as the yield of a country. The following map represents the yield  of cereals all over 
+									the world between 1961 and 2017. The countries that are displayed in grey are those for which no value is 
+									present in the FAO dataset.
+								
+								</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div class="image"><img src="images/cereals1961.png" alt="" /><img src="images/cereals2017.png" alt="" /></div><div class="content">
+								<h2>A yield explosion</h2>
+								<p>Those plots are more than convincing: the average yield of the top 10 countries has risen up by 3 between 
+									1961 and 2017. This proves that the 3rd agricultural revolution did improve the yields. Moreover, the top 10 
+									is composed of different countries in 1961 and in 2017, and a lot of those countries are rather small, like 
+									the islands of Saint Vincent and the Grenadines, Belgium or Oman. The USA are only ninth! Of course, a big 
+									production isn’t correlated with a big yield, and in 2017, the USA production of cereals is 4,000,000 tonnes 
+									whereas the Oman one is only 60000. But those figures show that a small country regarding its area can 
+									be more than 2 times more efficient than the USA.</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div ></div><div class="content">
+								<h2></h2>
+								<p><br /></p>
+							</div>
+						</section>
+					</section>
+					<!-- One -->
+					<section id="three" class="wrapper style5 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Evolution of Agriculture <br />
+								Inputs, Environmental Impacts & Outputs</h2>
+								<p>This is no big surprise, the yield of produced food by area units is skyrocketing for more than 50 years. 
+									The Third Agricultural Revolution seemed to be a big success! It has drastically changed the agriculture habits, 
+									and lead to an assertion nearly as admitted as “eat your soup, you’ll grow up soon”, which is “the more fertilizer 
+									you use, the faster your crops will grow”. But is this sustainable? Probably not. Can we keep going with this 
+									method? Probably not. But does data support those intuitions? Do we need to change our mind and practices now, or 
+									do we still have time?
+								</p>
+							</header>
+						</div>
+					</section>
+
+					<!-- Two -->
+					
+					<section id="four" class="wrapper alt style2">
+
+						<section class="spotlight">
+							<div {% include pca_ferti_year.html %}></div><div class="content">
+								<h2>Fertilizers still enhanced yield at a global scale<br /></h2>
+								<p>We used a statistical method (Principal Component Analysis, see methods for more) to obtain one variable, 
+									called “Agriculture score”, that best represents all the yield of one country. We computed this value for 
+									all the countries and colorized it, a posteriori, using the fertilizer use of the country.<br /><br />
+									The relationship is pretty obvious, right? The green countries, using lower fertilizer amounts, have lower 
+									agriculture scores than the blue ones and the red ones (see methods for significance). This relationship can be 
+									modeled by a linear relationship and the slope of this curve correspond to the global effect of fertilizer on the 
+									agriculture score.<br /><br />
+									To wrap up, fertilizers enhanced yields at a global scale. Indeed, they had a crucial role in the Green revolution. So nothing crazy for now…
+								</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div ></div><div class="content">
+								<h2>Should we need to change our practices?</h2>
+								<p>But what if we take a look at the evolution of this effect over time (i.e. evolution of the slope of the linear 
+									relationship)? Are fertilizers still increasing yields? Or should we focus on alternative now?<br /><br />
+									Ok, now that’s interesting: while the median of agriculture score  for all countries (left panel, in black) is 
+									stable, the median of the fertilizer use is increasing (right panel, in black). This results is even more visible 
+									for the high fertilizer group (in red): the agriculture score are slightly decreasing while the fertilizer uses 
+									are increasing.
+									Isn’t that crazy? The fertilizer use is increasing, especially in countries that use already higher amounts of 
+									fertilizers by hectare, and the agriculture score aren’t increasing that much, and are slightly decreasing in 
+									high fertilizer countries.<br /><br />
+								</p>
+							</div>
+						</section>
+
+						<section class="spotlight">
+							<div ></div><div class="content">
+								<h2></h2>
+								<p><br /></p>
+							</div>
+						</section>
+<!-- One -->
+					<section id="five" class="wrapper style5 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Need for TRANSITION</h2>
+								<p>TRANSITION
+									
+								</p>
+							</header>
+						</div>
+					</section>
+<!-- Two -->					
+					<section id="five" class="wrapper alt style2">
+						<section class="spotlight">
+							<div class="image"><img src="images/cereals1961.png" alt="" /><img src="images/cereals2017.png" alt="" /></div><div class="content">
+								<h2>Your title</h2>
+								<p> Your text</p>
+							</div>
+						</section>
+<!-- One -->
+					<section id="six" class="wrapper style5 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Need for change</h2>
+								<p>Overall, those results might be a sign of the soil degradation: due to over-exploitation of soils by intensive 
+									agriculture, they’re becoming less and less efficient, even when we’re trying to get high yields back using 
+									even more fertilizers that we did before.<br />
+									Otherwise, this might show that in some countries, we’re using even more fertilizers than the plants can 
+									absorb. Thus, even if the soil degradation doesn’t happen, there is no point in using that much fertilizers, 
+									plants cannot uptake them. That is thus a waste of money, but also a terrible issue for the planet, as we’ll 
+									see right now!<br /><br />
+									If those results are confirmed by other data sets and analyses, they could be used to support measures aiming 
+									to reduce fertilizer use, or to support a transition of agriculture from post-Green Revolution methods to new 
+									sustainable ones.
+									
+								</p>
+							</header>
+						</div>
+					</section>
+				

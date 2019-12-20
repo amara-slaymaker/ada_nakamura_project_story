@@ -1,0 +1,53 @@
+---
+layout: page
+title: Methods
+description:
+---
+			<section>
+				<h4>Dataset presentation</h4>
+				<p>The Food and Agriculture Organization provides worldwide information about the yields of different categories of crops over 
+					time, as well as about fertilizer use. Both are normalized by the harvested superficy and are thus directly comparable. 
+					However, we don’t have the amount of fertilizer by category of crops, but only the value of the global use of fertilizers.
+					Thus, it doesn't make sense to compare one yield of 1 country (e.g. cereals) to the total fertilizer use for this country, 
+					as the fertilizer could have been used for other categories of crops.</p>
+				<hr />
+				<h4>Creation of an Agriculture Score</h4>
+					<p>To properly compare yields and fertilizers, we need to construct a global value representing as well as possible all the 
+						yields of a country, i.e. reduce all the yields of a country to one global yield.<br /><br />
+						To do so, we preferred to use dimensionality reduction methods rather than a simple sum because of their better ability 
+						to maintain the distance information between objects (here, countries). <br /><br />
+						We performed first a Principal Component Analysis and focus on its first axis, PC1, called Agriculture score hereafter, 
+						which can be interpreted as the best linear relationship of yields to represent the diversity of agriculture between 
+						countries.
+						</p>
+				<hr />
+				<h4>Linear regression - Statistical Significance </h4>
+				<div {% include pca_ferti_year.html %}></div>
+					<p>We computed this value for all the countries and colorized it, a posteriori, using the fertilizer use of the country. 
+						On the first graph, we plotted the fertilizer use of each country in respect to the agriculture score, each dot corresponds
+						 thus to a country. <br /><br />
+						This relationship can be modeled by a linear relationship and the slope of this curve correspond to the global effect of 
+						fertilizer on the agriculture score. The validity of such a model is often measured using the R² statistics (you can see 
+						it by clicking on the regression line). This statistic takes values between 0 and 1, the closer to 1, the more valide 
+						the linear relationship.
+						</p>	
+				<hr />
+				<h4>Group comparison - Statistical Significance </h4>
+				<div class="image"><img src="images/boxplot.jfif" alt="" /></div>
+					<p>On this plot, we projected the Agriculture score for 2016 and draw the boxplots for 3 categories of country. Each categories 
+						corresponds to one third of the countries: the green ones to the countries using the lower amounts of fertilizer, the 
+						blue ones using medium amounts, and the red ones using the higher amounts of fertilizers.<br /><br />
+						Using those boxplots, we can perform statistical group comparison. As the data are not normally distributed 
+						(Shapiro-Wilk test), we used a Kruskal-Wallis rank tests. Those tests return a p-value: we considered here, as it 
+						usually done, that p-value < 0.05 shows that the medians of the different groups are significantly different.
+						</p>	
+				<hr />
+				<h4>Evolution of the fertilizer effect on agriculture score </h4>
+				<div ></div>
+					<p>To test the evolution of the fertilizer use effect on agriculture score, we plotted the agriculture score over time and 
+						the fertilizer use over time. In bold, you can see the median of each group and you can click on any curves to see the 
+						evolution for one country.
+						</p>	
+				<hr />
+
+				
