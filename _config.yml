@@ -57,3 +57,6 @@ social:
 markdown: kramdown
 #sass:
 #  style: compressed
+
+# theme                  : 
+remote_theme: arkadianriver/spectral
